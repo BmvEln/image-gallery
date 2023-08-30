@@ -1,0 +1,25 @@
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 25px;
+}
+
+.h2 {
+  font-size: 30px;
+  margin: 20px auto;
+  color: rgb(160, 16, 16);
+}
+
+.h1 {
+  color: rgb(212, 189, 147);
+}

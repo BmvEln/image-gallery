@@ -1,0 +1,17 @@
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 25px;
+}
+
+.h2 {
+  font-size: 30px;
+  margin: 20px auto;
+  color: rgb(160, 16, 16);
+}
+
+.h1 {
+  color: rgb(212, 189, 147);
+}
