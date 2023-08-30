@@ -12,8 +12,6 @@ const SingleImage = () => {
     return image.id.toString() === imageId;
   });
 
-  console.log(image);
-
   useEffect(() => {
     if (!image) {
       navigate('..', { relative: 'path' });
