@@ -11,12 +11,11 @@ const SingleImage = ({ images }) => {
     return image.id.toString() === imageId;
   });
 
-  // При 12 > 12 переводить на все картинки
   useEffect(() => {
-    if (LIMIT_PHOTOS > 12) {
+    if (imageId > LIMIT_PHOTOS) {
       navigate('..', { relative: 'path' });
     }
-  }, [LIMIT_PHOTOS, navigate]);
+  }, [imageId, navigate]);
 
   return (
     <>
