@@ -1,0 +1,29 @@
+// @import index.css
+
+.home {
+  width: 100vw;
+  min-height: 100vh;
+  //   overflow-y: hidden;
+  background-color: red;
+}
+
+.home.homeLight {
+  background-color: rgb(68, 36, 36);
+}
+
+.home.homeDark {
+  background-color: #294a51;
+  // color: lightsteelblue
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(103, 62, 144);
+}
+
+.header__text {
+  margin: 20px;
+  font-size: 30px;
+  color: var(--theme-default-header);
+}

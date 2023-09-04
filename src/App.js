@@ -1,33 +1,32 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Images from './components/Images';
-import Home from './components/Home';
-import About from './components/About';
-import Contacts from './components/Contacts';
-import NotFound from './components/NotFound';
-import SingleImage from './components/SingleImage';
-import MainLayout from './components/MainLayout';
-import { ImageContext } from './Contexts/ImageContext';
+import Images from './components/Images/Images';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Contacts from './components/Contacts/Contacts';
+import NotFound from './components/NotFound/NotFound';
+import SingleImage from './components/SingleImage/SingleImage';
+import MainLayout from './components/MainLayout/MainLayout';
+import { API_URL_IMAGE } from './components/Constants/Constants';
+import { useImages } from './hooks/useImages';
 import './App.css';
 
-const LIMIT_PHOTOS = 12;
-const URL_IMAGE = `https://jsonplaceholder.typicode.com/photos?_start=0&_limit=${LIMIT_PHOTOS}`;
+// Хочу сделать задний фон градиентный
+// Поправить менюшку
+// Добавить лого
 
 function App() {
   const [images, setImages] = useState([]);
-  const [error, setError] = useState('');
-  const [isLoading, setLoading] = useState(true);
+
+  const { error, loading, getImages } = useImages(API_URL_IMAGE);
 
   useEffect(() => {
-    axios
-      .get(URL_IMAGE)
-      .then((data) => {
-        setImages(data.data);
-      })
-      .catch((error) => setError(error.message))
-      .finally(() => setLoading(false));
+    getImages().then((value) => setImages(value));
   }, []);
+
+  if (!images) {
+    return <h2 className="headingError">{`Error: ${error}`}</h2>;
+  }
 
   return (
     <BrowserRouter>
@@ -38,16 +37,12 @@ function App() {
             <Route
               path="images"
               element={
-                <Images images={images} isLoading={isLoading} error={error} />
+                <Images images={images} isLoading={loading} error={error} />
               }
             />
             <Route
               path="images/:imageId"
-              element={
-                <ImageContext.Provider value={{ images }}>
-                  <SingleImage />
-                </ImageContext.Provider>
-              }
+              element={<SingleImage images={images} />}
             />
             <Route path="about" element={<About />} />
             <Route path="contacts" element={<Contacts />} />

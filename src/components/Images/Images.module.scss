@@ -6,12 +6,18 @@
   padding-left: 25px;
 }
 
-.h2 {
+.headingError {
   font-size: 30px;
   margin: 20px auto;
   color: rgb(160, 16, 16);
 }
 
-.h1 {
+.heading {
   color: rgb(212, 189, 147);
+}
+
+.header__text {
+  font-size: 40px;
+  margin: 20px auto 40px;
+  color: var(--theme-default-header);
 }

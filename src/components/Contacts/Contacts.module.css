@@ -1,0 +1,5 @@
+.header__text {
+  font-size: 20px;
+  margin: 20px;
+  color: var(--theme-default-header);
+}

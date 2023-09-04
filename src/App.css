@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+
+.headingError {
+  font-size: 40px;
+  margin-top: 50px;
+  text-align: center;
+  color: crimson;
+}

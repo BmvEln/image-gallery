@@ -1,22 +1,22 @@
 import { useEffect, useContext } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { ImageContext } from '../Contexts/ImageContext';
+import { LIMIT_PHOTOS } from '../Constants/Constants';
 import styles from './SingleImage.module.scss';
 
-const SingleImage = () => {
+const SingleImage = ({ images }) => {
   const { imageId } = useParams();
-  const { images } = useContext(ImageContext);
   const navigate = useNavigate();
 
   const image = images.find((image) => {
     return image.id.toString() === imageId;
   });
 
+  // При 12 > 12 переводить на все картинки
   useEffect(() => {
-    if (!image) {
+    if (LIMIT_PHOTOS > 12) {
       navigate('..', { relative: 'path' });
     }
-  }, [image, navigate]);
+  }, [LIMIT_PHOTOS, navigate]);
 
   return (
     <>

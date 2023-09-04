@@ -1,10 +1,19 @@
-body {
-  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  background-color: #294a51;
+/* Themes */
+:root {
+  --theme-light-header: #482455;
+  --theme-dark-header: #347c8b;
+  --theme-default-header: var(--theme-light-header);
+
+  --theme-light-background: linear-gradient(to right, #9796f0, #fbc7d4);
+  --theme-dark-background: linear-gradient(to right, #141e30, #243b55);
+
+  --theme-default-background: var(--theme-light-background);
 }
 
-h1 {
-  margin: 20px auto 50px;
-  color: white;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: var(--theme-default-background);
 }
