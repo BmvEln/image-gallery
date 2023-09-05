@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // column-gap: 20px;
   width: 970px;
 
   padding: 10px auto;
@@ -39,7 +38,8 @@
 
 .btnTheme button {
   border: none;
-  background-color: none;
+  background-color: rgba(240, 231, 231, 0.61);
+  color: rgba(0, 0, 0, 0.695);
   font-size: 20px;
   padding: 5px;
 
@@ -47,9 +47,4 @@
   border-radius: 5px;
 
   cursor: pointer;
-}
-
-.btnTheme button:hover {
-  color: rgb(82, 63, 36);
-  transition: color 0.2s ease-in;
 }

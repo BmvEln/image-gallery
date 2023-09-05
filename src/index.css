@@ -6,8 +6,11 @@
 
   --theme-light-background: linear-gradient(to right, #9796f0, #fbc7d4);
   --theme-dark-background: linear-gradient(to right, #141e30, #243b55);
-
   --theme-default-background: var(--theme-light-background);
+
+  --theme-light-singleImageButton: #7395ad;
+  --theme-dark-singleImageButton: #233d43;
+  --theme-default-singleImageButton: var(--theme-light-singleImageButton);
 }
 
 body {

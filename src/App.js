@@ -11,13 +11,8 @@ import { API_URL_IMAGE } from './components/Constants/Constants';
 import { useImages } from './hooks/useImages';
 import './App.css';
 
-// Хочу сделать задний фон градиентный
-// Поправить менюшку
-// Добавить лого
-
 function App() {
   const [images, setImages] = useState([]);
-
   const { error, loading, getImages } = useImages(API_URL_IMAGE);
 
   useEffect(() => {

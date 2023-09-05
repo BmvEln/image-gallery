@@ -2,8 +2,8 @@ import styles from './About.module.css';
 
 const About = () => {
   return (
-    <div className={styles.header__text}>
-      <h1>About</h1>
+    <div>
+      <h1 className={styles.header__text}>About</h1>
     </div>
   );
 };

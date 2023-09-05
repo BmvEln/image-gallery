@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import { useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { LIMIT_PHOTOS } from '../Constants/Constants';
 import styles from './SingleImage.module.scss';
@@ -13,13 +13,13 @@ const SingleImage = ({ images }) => {
 
   useEffect(() => {
     if (imageId > LIMIT_PHOTOS) {
-      navigate('..', { relative: 'path' });
+      navigate('../../*', { relative: 'path' });
     }
   }, [imageId, navigate]);
 
   return (
-    <>
-      <div className={styles.singleImage}>
+    <div className={styles.singleImage}>
+      <div className={styles.image}>
         <img src={image?.url} alt="" />
         <br />
         <p>{image?.title}</p>
@@ -29,7 +29,7 @@ const SingleImage = ({ images }) => {
           All images
         </Link>
       </button>
-    </>
+    </div>
   );
 };
 
