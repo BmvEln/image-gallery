@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/image-gallery/static/css/main.548066fa.css",
+    "main.js": "/image-gallery/static/js/main.bf2daba3.js",
+    "index.html": "/image-gallery/index.html",
+    "main.548066fa.css.map": "/image-gallery/static/css/main.548066fa.css.map",
+    "main.bf2daba3.js.map": "/image-gallery/static/js/main.bf2daba3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.548066fa.css",
+    "static/js/main.bf2daba3.js"
+  ]
+}
