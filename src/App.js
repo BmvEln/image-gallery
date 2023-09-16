@@ -36,8 +36,8 @@ function App() {
             <Route path="images/:imageId" element={<SingleImage images={images} />} />
             <Route path="about" element={<About />} />
             <Route path="contacts" element={<Contacts />} />
-            <Route path="*" element={<NotFound />} />
             <Route path="image-gallery" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </div>
