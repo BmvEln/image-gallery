@@ -31,17 +31,13 @@ function App() {
             <Route index element={<Home />} />
             <Route
               path="images"
-              element={
-                <Images images={images} isLoading={loading} error={error} />
-              }
+              element={<Images images={images} isLoading={loading} error={error} />}
             />
-            <Route
-              path="images/:imageId"
-              element={<SingleImage images={images} />}
-            />
+            <Route path="images/:imageId" element={<SingleImage images={images} />} />
             <Route path="about" element={<About />} />
             <Route path="contacts" element={<Contacts />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="image-gallery" element={<Home />} />
           </Route>
         </Routes>
       </div>
